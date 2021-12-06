@@ -21,6 +21,13 @@ void jeuNormal(SDL_Window *window, SDL_Renderer *renderer1, SDL_Texture *texture
     bool GAMEISRUNNNING = true;
     int nNum;
     int n4 = 0;
+    for ( auto l:P){
+        for ( auto i:l){
+            if (i == 4){
+                n4++;
+            }
+        }
+    }
     while (GAMEISRUNNNING){
 
         SDL_SetRenderDrawColor(renderer1, 255, 255, 255, SDL_ALPHA_OPAQUE);
@@ -126,6 +133,13 @@ void jeu2(SDL_Window *window, SDL_Renderer *renderer1, SDL_Texture *texture1, TT
     bool GAMEISRUNNNING = true;
     int nNum, nNum2;
     int n4 = 0;
+    for ( auto l:P){
+        for ( auto i:l){
+            if (i == 4){
+                n4++;
+            }
+        }
+    }
     while (GAMEISRUNNNING){
 
         SDL_SetRenderDrawColor(renderer1, 255, 255, 255, SDL_ALPHA_OPAQUE);
