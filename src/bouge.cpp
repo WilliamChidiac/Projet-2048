@@ -8,7 +8,7 @@ cases changeCases(plateauCases PC){
             int i = puissance2(PC.first[l][c]);
             if (i == 1){
                 PC.second[l][c].change_color(255, 255, 255);
-            }else if (i == 0){
+            }else if (i == -1){
                 PC.second[l][c].change_color(50, 50, 50);
             }else{
                 PC.second[l][c].change_color(255-20*(i-1), 20*(i-1), 255-i*i);
