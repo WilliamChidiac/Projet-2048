@@ -1,7 +1,7 @@
 #include "modele.h"
 
 int main(int argc, char *argv[]){
-    
+    if (tests()){return 0;}
     //INTIAILISATION DES DIFFERENTES VARIABLES : DEBUT
     if (SDL_Init(SDL_INIT_EVERYTHING)!=0){
         printf("error initializing SDL: %s\n", SDL_GetError());
