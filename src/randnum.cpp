@@ -32,7 +32,7 @@ void C2048::e_rect(int nombre){
 
 
 int puissance2(int num){
-    int i = 0;
+    int i = -1;
     for(int num1 = 1; num1 <= num; num1*=2){
         i++;
     }
