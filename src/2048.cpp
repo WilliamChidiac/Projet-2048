@@ -23,7 +23,7 @@ int main(int argc, char *argv[]){
         SDL_RenderClear(renderer1);
         SDL_RenderClear(renderer1);
         if(mode == 1){
-            jeuAI(window, renderer1, texture1, font);
+            jeuNormal(window, renderer1, texture1, font);
         }else if (mode == 2){
             jeu2(window, renderer1, texture1, font);
         }else if (mode == 0){
