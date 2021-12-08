@@ -1,0 +1,40 @@
+Nom : Chidiac
+Prenom : William
+Mail : william.chidiac@universite-paris-saclay.fr
+Groupe : inconnue
+				                                Rapport de Projet : 
+
+
+Niveau 0 : 
+    1.	Tous les fichiers compilent parfaitement.
+    2.	Le jeu est fonctionnel,
+    3.	Et le mode de jeu normal comporte exactement les mêmes règles que le jeu original.
+    4.	A chaque mouvement le score est mis à jour.
+    5.	Etant d
+    6.	Toutes les fonctions sont spécifiées et documente ; et la plupart des fonctions sont teste, étant donné que j’ai utilisé les librairies SDL et SDL_ttf pour pouvoir créer une interface graphique, toutes les fonctions jouant dans l’affichage ou la modification de l’interface graphique n’ont pas été testées.
+    7.	Vis-à-vis de l’affichage de la grille sur le terminal : ayant suivis les règles du jeu, il existe des cases contenant des numéros plus élevés que 2048 qui peuvent être atteinte tel que 65536 ou autres. Je me suis donc permis de faire en sorte que pour une position donne, l’affichage de la grille (longueur…) dépend de la longueur du nombre le plus grands étant dans la grille. Ainsi, si le joueur parvint à construire une case contenant plus que 4 chiffres, cela ne devrait pas poser de problème. 
+
+
+Niveau 1 :
+    1.	Comme j’ai utilisé la librairie SDL, j’utilise une interface graphique pour afficher le jeu et non pas la console.
+    2.	Il est possible dans ma version du jeu de jouer de jouer en appuyant sur les flèches : haut, bas, droite, gauche. Les gamers aimant jouer avec les touches w : haut, s : bas, d : droite, a : gauche (sur les claviers QWERTY) ; il est aussi possible de jouer en utilisant ces touches.
+    3.	En effet, même si elle n’est pas utilisée, ma fonction affiche_plateau qui se charge d’afficher le plateau sur la console se charge d’affiche un plateau un plateau a la place du plateau précèdent. Cependant la solution utilise pour parvenir à faire cela est propre à Linux, et donc si le joueur joue sur un autre système d’exploitation comme Windows par exemple, il faudra changer la syntaxe de quelques lignes de code.
+    4.	En ce qui concerne le calcul du score du jeu, la solution trouve nécessite quand même l’utilisation d’une variable global représentant le nombre de 4 qui n’ont pas été formé mais qui ont été directement été ajoute après un mouvement. En effet si cette valeur n’est pas prise en compte, le score associe a un plateau pourrait être plus élevé que ce qu’il est devrait être.
+
+
+Niveau 2 :
+    1.	Mon projet étant décomposer en plusieurs fichiers contenant chacun des fonctions ayant des utilités plutôt similaires, la création d’un Makefile était primordiale. Je me suis ainsi renseigne sur le sujet et j’ai crée mon propre Makefile. En revanche, ne connaissant pas la différence entre un Makefile générique et un autre adapte à mon projet, je ne pourrai pas vous dire dans laquelle de ces 2 catégories mon Makefile prendrai place.
+    2.	A fin de m’assurer de toujours avoir un plan B au cas ou par malheur mon projet disparaissait , mon fichier a été télécharger sur mon compte GitHub (WilliamChidiac).
+
+Niveau 3 :
+    1.	L’idée de construction d’une IA m’avait beaucoup plus vu que le sujet ma toujours intéresse, malheureusement n’ayant pas de partenaire pour m’aider a avancer plus rapidement dans le projet, la réalisation de cette consigne n’a pas pu être accompli comme prévus par manque de temps à cause d’autre projets, présentations, examens auxquels je devais aussi me préparer. J’ai donc construit une « IA » mais aussi performante que j’aurai aimé qu’elle soit.
+    2.	J’ai implanté ma propre version du jeu : les règles et les mécaniques sont identiques a celle du jeu normal a un détail près. Après chaque coup, il n’y a pas un mais de numéros qui s’ajoute à la grille si possible (sinon un seul numéro sera ajoute). Il est vrai que dit comme ça, ce changement ne semble pas affecter le jeu de manière flagrante, mais c’est une fois que l’on joue a ce mode que la différence ce fait remarque. Mais pour être franc j’ai choisi une telle variante parce que vis-à-vis du code, il n’y a que quelques lignes de code qui change entre les 2 modes jeu (normal, la version implanter).
+    3.	Pour l’interface graphique :  les librairies avec lesquelles j’ai travaillé sont SDL et SDL_ttf.
+    Consigne réalisée.
+    4.	Non traite
+
+Retouche/Modification personnel :
+    1.	J’ai implanté un système de meilleur score en utilisant des fichiers texte dans lequel le meilleur score est stockée et qui change ce score si au cours d’une partie le score associe dépasse du meilleur score.
+    2.	Concernant le mode de jeu normal uniquement, j’ai rajoute un bouton « IA » qui permet au joueur de faire appel a une IA si il le souhaite pour que celle-ci prenne la relevé.
+
+
