@@ -1,7 +1,7 @@
 Nom : Chidiac
 Prenom : William
 Mail : william.chidiac@universite-paris-saclay.fr
-Groupe : inconnue
+Groupe : LDDIM2
 				                                Rapport de Projet : 
 
 
