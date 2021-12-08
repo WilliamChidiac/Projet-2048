@@ -8,8 +8,6 @@ bool CHECK(bool test, string test1){
     return true;
 }
 
-
-
 bool tests(){
     int n = 0;
     //puissance2 test
@@ -72,65 +70,3 @@ bool tests(){
 
     if (n!=0){return true;}else{ return false;}
 }
-
-
-/*
-void tests(){
-    //puissance2 test
-    CHECK(puissance2(16) == 4);
-    CHECK(puissance2(0) == 0);
-
-    //randint test
-    CHECK(randint(4)>=0 and randint(4)<4);
-
-    //randnum
-    int randnumtest = randnum();
-    CHECK(randnumtest == 2 or randnumtest == 4);
-    
-    //ligneColone test
-    
-    CHECK((LigneColone(15) == tab {3, 3}));
-    CHECK((LigneColone(0) == tab {0, 0}));
-    CHECK((LigneColone(7) == tab {1, 3}));
-    
-    //init_plateau test
-    plateau init_plateau_test = init_plateau();
-    int init_plateau_test_0, init_plateau_test_2, init_plateau_test_4;
-    for(auto l:init_plateau_test){
-        for(auto i:l){
-            if (i == 0){
-                init_plateau_test_0++;
-            }else if(i == 2){
-                init_plateau_test_2++;
-            }else if(i == 4){
-                init_plateau_test_4++;
-            }
-        }
-    }
-    CHECK((init_plateau_test_0 == 14 and ((init_plateau_test_2 == 2 and init_plateau_test_4 == 0) or (init_plateau_test_2 == 1 and init_plateau_test_4 == 1) or (init_plateau_test_2 == 0 and init_plateau_test_4 == 2))));
-
-    // test des different deplacement
-    plateau deplacement = {{0, 2, 2, 4}, 
-                           {0, 4, 2, 4}, 
-                           {8, 8, 8, 8}, 
-                           {4, 0, 0, 4}};
-    CHECK((gauche(deplacement) == plateau {{4, 4, 0, 0}, {4, 2, 4, 0}, {16, 16, 0, 0}, {8, 0, 0, 0}}));
-    CHECK((droite(deplacement) == plateau {{0, 0, 4, 4}, {0, 4, 2, 4}, {0, 0, 16, 16}, {0, 0, 0, 8}}));
-    CHECK((enhaut(deplacement) == plateau {{8, 2, 4, 8}, {4, 4, 8, 8}, {0, 8, 0, 4}, {0, 0, 0, 0}}));
-    CHECK((enbas(deplacement) == plateau {{0, 0, 0, 0}, {0, 2, 0, 8}, {8, 4, 4, 8}, {4, 8, 8, 4}}));
-
-    //test score
-    CHECK(score(plateau {{4, 128, 4, 16}, {0, 0, 0, 8}, {0, 0, 0, 0}, {2, 0, 0, 4}}, 5) == 824);
-
-    //test gagnant
-    CHECK((not gagnant(plateau {{4, 128, 4, 16}, {0, 0, 0, 8}, {0, 0, 0, 0}, {2, 0, 0, 4}}));
-    CHECK((gagnant(plateau {{4, 128, 4, 16}, {0, 0, 0, 8}, {0, 0, 0, 0}, {2, 0, 2048, 4}})));
-
-    //test defaite
-    CHECK((not defaite(plateau {{4, 128, 4, 16}, {0, 0, 0, 8}, {0, 0, 0, 0}, {2, 0, 0, 4}})));
-    CHECK((defaite(plteau {{4, 128, 4, 16}, {2, 4, 2, 8}, {32, 2, 8, 4}, {2, 256, 16, 8}})));
-
-    //test ajouteNum
-    CHECK((ajouteNum(plateau {{4, 128, 4, 16}, {2, 4, 2, 8}, {16, 2, 4, 32}, {2, 8, 0, 4}}, 4) == plateau {{4, 128, 4, 16}, {2, 4, 2, 8}, {16, 2, 4, 32}, {2, 8, 4, 4}}));
-}
-*/
