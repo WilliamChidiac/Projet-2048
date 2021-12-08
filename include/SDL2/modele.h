@@ -5,11 +5,7 @@
 #include <string>
 #include <fstream>
 #include <stdexcept>
-/*
-#define CHECK(test) \
-    if (!test)      \
-        cout<<"test failed in line "<< __LINE__<< " : "<< #test << endl 
-*/
+
 using namespace std;
 
 class C2048{
@@ -232,7 +228,7 @@ void affiche_highscore(string filename, SDL_Renderer *renderer, TTF_Font *font, 
 
 
 /**
- * @brief met en place une partie de 2048 normal
+ * @brief met en place une partie de 2048 avec une IA implante et prete a etre utilise en cas de besoin
  * 
  * @param window la fenetre dans lequel s'affichera le jeu 
  * @param renderer1 le moteur de rendu dans lequel le jeu sera dessine et modifie
@@ -264,15 +260,18 @@ void jeu2(SDL_Window *window, SDL_Renderer *renderer1, SDL_Texture *texture1, TT
 plateau AI(plateau P, int nb_simulation, int nb_coup_par_simulation);
 
 /**
- * @brief met en place une partie de 2048 avec une IA implante et prete a etre utilise en cas de besoin
+ * @brief s'assure du bon fonctionement d'une fonction
  * 
- * @param window la fenetre dans lequel s'affichera le jeu 
- * @param renderer1 le moteur de rendu dans lequel le jeu sera dessine et modifie
- * @param texture1 la texture utilise
- * @param font la police utilise
- * 
+ * @param test l'operation a verifier
+ * @param test1 l'operation a verifier
+ * @return false si le test a echoue, true sinon.
  */
-void jeuAI(SDL_Window *window, SDL_Renderer *renderer1, SDL_Texture *texture1, TTF_Font *font);
+bool CHECK(bool test, string test1);
 
-
-void CHECK(string test);
+/**
+ * @brief fonction regroupent toutes les fonctions ayant besoin d'etre teste
+ * 
+ * @return true si au moin un test a echoue
+ * @return false sinon
+ */
+bool tests();
