@@ -4,6 +4,8 @@ Mail : william.chidiac@universite-paris-saclay.fr
 Groupe : LDDIM2
 				                                Rapport de Projet : 
 
+librairies externe utilise : SDL2 et SDL2_ttf
+
 
 Niveau 0 : 
     1.	Tous les fichiers compilent parfaitement.
